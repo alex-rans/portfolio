@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+@font-face {
+  font-family: "Valorax";
+  src: url("../assets/fonts/valorax.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+#loading-div {
+  background: rgb(43, 43, 43);
+  background: linear-gradient(0deg, rgb(43, 43, 43) 0%, rgb(91, 91, 91) 100%);
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+#loading-div .loading-top {
+  line-height: 3rem;
+}
+#loading-div .loading-top p:first-child {
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+}
+#loading-div .loading-top p:last-child {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+}
+#loading-div .loading-middle .loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #FFF;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+#loading-div .loading-bottom {
+  line-height: 1rem;
+}
+#loading-div .loading-bottom p:first-child {
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+}
+#loading-div .loading-bottom p:last-child {
+  letter-spacing: 0.3rem;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#about-me {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+#about-me img {
+  bottom: -50%;
+  height: 100%;
+  left: 35%;
+  animation: about-me-background 1s forwards ease;
+  z-index: 10;
+}
+#about-me .name {
+  text-transform: lowercase;
+  z-index: 11;
+  bottom: 30%;
+  left: 18%;
+  font-size: 7rem;
+  font-family: "valorax", sans-serif;
+  color: #000;
+  background-color: inherit;
+  animation: about-me-firstname 1s forwards ease;
+}
+#about-me .name:nth-child(3) {
+  line-height: 8rem;
+  z-index: 11;
+  bottom: 20%;
+  animation: about-me-surname 1s forwards ease;
+}
+#about-me .about-me-backgroundtext {
+  padding: 10rem 10vw 5rem 15vw;
+  z-index: 9;
+  animation: about-me-bgtext 1s forwards ease;
+}
+#about-me .about-me-backgroundtext .profession {
+  font-family: Tektur, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-size: 9rem;
+  color: #dcdcdc;
+  width: 100%;
+  line-height: 8rem;
+}
+#about-me .about-me-backgroundtext .profession:last-child {
+  text-align: right;
+}
+#about-me .links {
+  bottom: 26.7%;
+  right: 34%;
+}
+#about-me .links a {
+  z-index: 14;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: auto;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.8em;
+  animation: about-me-links 0.5s forwards ease;
+}
+#about-me .links a i {
+  vertical-align: middle;
+}
+#about-me .links a:nth-child(2) {
+  z-index: 13;
+  left: 0;
+  animation: about-me-links-2 1s forwards ease;
+  animation-delay: 1s;
+}
+#about-me .links a:nth-child(3) {
+  z-index: 12;
+  left: 0;
+  animation: about-me-links-3 1s forwards ease;
+  animation-delay: 1s;
+}
+#about-me .links a:nth-child(4) {
+  z-index: 11;
+  left: 0;
+  animation: about-me-links-4 1s forwards ease;
+  animation-delay: 1s;
+}
+
+#portfolio {
+  scroll-snap-align: start;
+  background-color: #111111;
+  overflow: hidden;
+  position: inherit;
+}
+#portfolio .portfolio-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+#portfolio .portfolio-container img {
+  z-index: 0;
+  position: absolute;
+  width: 105vw;
+  height: 105vh;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+#portfolio .portfolio-container .portfolio-text {
+  position: absolute;
+  z-index: 2;
+}
+#portfolio .portfolio-container .portfolio-text p {
+  color: #fff;
+  background-color: transparent;
+}
+
+@keyframes about-me-background {
+  100% {
+    height: 135%;
+    left: 30%;
+  }
+}
+@keyframes about-me-firstname {
+  100% {
+    bottom: 32%;
+  }
+}
+@keyframes about-me-surname {
+  100% {
+    bottom: 17%;
+  }
+}
+@keyframes about-me-bgtext {
+  100% {
+    padding: 10rem 18vw 5rem 25vw;
+  }
+}
+@keyframes about-me-links {
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes about-me-links-2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 75px;
+    opacity: 1;
+  }
+}
+@keyframes about-me-links-3 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 150px;
+    opacity: 1;
+  }
+}
+@keyframes about-me-links-4 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 225px;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
